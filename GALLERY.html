@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Stone Sculptures by Godfrey Matangira</title>
-	<link rel="stylesheet" type="text/css" href="sculptures.css">
+	<link rel="stylesheet" type="text/css" href="./css/styles.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 	<link rel="stylesheet" type="text/css"
 		href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -28,9 +28,9 @@
 
 				<ul>
 					<li><a href="index.html">HOME</a></li>
-					<li><a href="GALLERY.html">GALLERY</a></li>
-					<li><a href="ABOUT.html">ABOUT</a></li>
-					<li><a href="CONTACT.html">CONTACT</a></li>
+					<li><a href="gallery.html">GALLERY</a></li>
+					<li><a href="about.html">ABOUT</a></li>
+					<li><a href="contact.html">CONTACT</a></li>
 				</ul>
 			</div>
 			<i class="fa fa-bars" onclick="showMenu()"></i>
@@ -84,55 +84,7 @@
 
 			<!-------Script-------->
 
-			<script>
-				const textElement = document.getElementById('sculptorText');
-				const text = textElement.textContent;
-
-				function animateText() {
-					//fade out the text
-					textElement.classList.add('fade-out');
-
-					setTimeout(() => {
-						//clear the text
-						textElement.textContent = '';
-						textElement.classList.remove('fade-out');
-
-						//Add the typewriter effect
-						textElement.classList.add('typewriter');
-						let i = 0;
-						const typingInterval = setInterval(() => {
-							if (i < text.length) {
-								textElement.textContent += text.charAt(i)
-								i++;
-							}
-
-							else {
-								clearInterval(typingInterval);
-								//Remove typewriter effect after completion
-								setTimeout(() => {
-									textElement.classList.remove('typewriter');
-									///Restart the animation
-									setTimeout(animateText, 700);
-								}, 700);
-							}
-						}, 250); // Adjust typing speed here
-					}, 300); //Wait for fade-out to complete
-
-				}
-				//Start the animation
-				animateText();
-
-				// ---------------------------Toggle Menu------------------
-
-				var navLinks = document.getElementById("navLinks");
-
-				function showMenu() {
-					navLinks.style.right = "0";
-				}
-				function hideMenu() {
-					navLinks.style.right = "-200px";
-				}
-			</script>
+			<script src="./js/script.js"></script>
 </body>
 
 </html>
