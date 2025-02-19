@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Stone Sculptures by Godfrey Matangira</title>
 	<link rel="stylesheet" type="text/css" href="sculptures.css">
-	<link rel="sty*lesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -32,24 +32,36 @@
 				</div>
 				<i class="fa fa-bars" onclick="showMenu()" ></i>
 			</nav>
-
-</section>
-
-			<section class="home">
-	<div class="home-content">
-		<h1>Hi I'm Godfrey Matangira</h1>
-		<div class="fade-text" id="sculptorText"><h3>I am a Stone Sculptor</h3></div>
-
-		<p><h2>Welcome to Matangira Gallery</h2>
-			Where every sculpture tells a story, and every piece is a seal of true art.<br>
-			Step into a world where creativity meets craftsmanship, and timeless beauty comes to life.</p>
-	
-		<div class="btn-box">
-			<a href="https://wa.me/+263773546902">Hire Me</a>
-			<a href="https://wa.me/+263773546902">Let's Talk</a>
+<div id="gallery">
+    <div class="container">
+		<div class="fade-text" id="sculptorText"><h1 class="true-art"> Matangira Gallery A Seal Of True Art</h1><br></div>
+        <h1 class="sub-title"><u>My Work</u></h1>
+		<div class="work-list">
+			<div class="work">
+				<img src="./sculptures-images/background2.jpg" alt="">
+			</div>
+			<div class="work">
+				<img src="./sculptures-images/background1.jpg" alt="">
+			</div>
+			<div class="work">
+				<img src="./sculptures-images/background3.jpg" alt="">
+			</div>
+			<div class="work">
+				<img src="./sculptures-images/background4.jpg" alt="">
+			</div>
+			<div class="work">
+				<img src="./sculptures-images/background5.jpg" alt="">
+			</div>
+			<div class="work">
+				<img src="./sculptures-images/background6.jpg" alt="">
+			</div>
+			<div class="work">
+				<img src="./sculptures-images/background7.jpg" alt="">
+			</div>
 		</div>
-		</div>
-	</section>
+    </div>
+</div>
+
 
 <!------FOOTER-------->
 
@@ -64,8 +76,6 @@
     <p>&copy; 2025 Matangira Gallery. All rights reserved.</p>
 
 </div>
-</section>
-
 
 <!-------Script-------->
 
@@ -97,11 +107,11 @@ textElement.classList.add('fade-out');
 		setTimeout(() => {
 			textElement.classList.remove('typewriter');
 			///Restart the animation
-			setTimeout (animateText,760);
-			},760);
+			setTimeout (animateText,700);
+			},700);
 		}	
-	},76); // Adjust typing speed here
-}, 760); //Wait for fade-out to complete
+	},250); // Adjust typing speed here
+}, 300); //Wait for fade-out to complete
 
 }
 //Start the animation
@@ -118,5 +128,5 @@ function showMenu() {
 		navLinks.style.right = "-200px";
 	}
 </script>
-	</body>
+</body>
 </html>
