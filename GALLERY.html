@@ -1,132 +1,138 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Stone Sculptures by Godfrey Matangira</title>
 	<link rel="stylesheet" type="text/css" href="sculptures.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css"
+		href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
 
-<section class="header">
-	<div class="slideshow-container">
-        <div class="slide"></div>
-        <div class="slide"></div>
-        <div class="slide"></div>
-        <div class="slide"></div>
-    </div>
+	<section class="header">
+		<div class="slideshow-container">
+			<div class="slide"></div>
+			<div class="slide"></div>
+			<div class="slide"></div>
+			<div class="slide"></div>
+		</div>
 
 		<nav>
 			<a href="index.html"><img src="./sculptures-images/logo2.png" height="100px" width="100px"> </a>
-				<div class="nav-links" id="navLinks">
-					<i class="fa fa-times"  onclick="hideMenu()"></i>
+			<div class="nav-links" id="navLinks">
+				<i class="fa fa-times" onclick="hideMenu()"></i>
 
-					<ul>
-						<li><a href="index.html">HOME</a></li>
-						<li><a href="GALLERY.html">GALLERY</a></li>
-						<li><a href="ABOUT.html">ABOUT</a></li>
-						<li><a href="CONTACT.html">CONTACT</a></li>
-					</ul>
+				<ul>
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="GALLERY.html">GALLERY</a></li>
+					<li><a href="ABOUT.html">ABOUT</a></li>
+					<li><a href="CONTACT.html">CONTACT</a></li>
+				</ul>
+			</div>
+			<i class="fa fa-bars" onclick="showMenu()"></i>
+		</nav>
+		<div id="gallery">
+			<div class="container">
+				<div class="fade-text" id="sculptorText">
+					<h1 class="true-art"> Matangira Gallery A Seal Of True Art</h1><br>
 				</div>
-				<i class="fa fa-bars" onclick="showMenu()" ></i>
-			</nav>
-<div id="gallery">
-    <div class="container">
-		<div class="fade-text" id="sculptorText"><h1 class="true-art"> Matangira Gallery A Seal Of True Art</h1><br></div>
-        <h1 class="sub-title"><u>My Work</u></h1>
-		<div class="work-list">
-			<div class="work">
-				<img src="./sculptures-images/background2.jpg" alt="">
-			</div>
-			<div class="work">
-				<img src="./sculptures-images/background1.jpg" alt="">
-			</div>
-			<div class="work">
-				<img src="./sculptures-images/background3.jpg" alt="">
-			</div>
-			<div class="work">
-				<img src="./sculptures-images/background4.jpg" alt="">
-			</div>
-			<div class="work">
-				<img src="./sculptures-images/background5.jpg" alt="">
-			</div>
-			<div class="work">
-				<img src="./sculptures-images/background6.jpg" alt="">
-			</div>
-			<div class="work">
-				<img src="./sculptures-images/background7.jpg" alt="">
+				<h1 class="sub-title"><u>My Work</u></h1>
+				<div class="work-list">
+					<div class="work">
+						<img src="./sculptures-images/background2.jpg" alt="">
+					</div>
+					<div class="work">
+						<img src="./sculptures-images/background1.jpg" alt="">
+					</div>
+					<div class="work">
+						<img src="./sculptures-images/background3.jpg" alt="">
+					</div>
+					<div class="work">
+						<img src="./sculptures-images/background4.jpg" alt="">
+					</div>
+					<div class="work">
+						<img src="./sculptures-images/background5.jpg" alt="">
+					</div>
+					<div class="work">
+						<img src="./sculptures-images/background6.jpg" alt="">
+					</div>
+					<div class="work">
+						<img src="./sculptures-images/background7.jpg" alt="">
+					</div>
+				</div>
 			</div>
 		</div>
-    </div>
-</div>
 
 
-<!------FOOTER-------->
+		<!------FOOTER-------->
 
-<section class="footer">
+		<section class="footer">
 
-	<div class="icons">
-		<a href="https://facebook.com/Godfrey Matangira"><i class="fab fa-facebook"></i></a>
-			<a href="https://wa.me/+263773546902"><i class="fab fa-whatsapp"></i></a>
-			<a href="tel:+263773546902"><i class="fa fa-phone"></i></a>
+			<div class="icons">
+				<a href="https://facebook.com/Godfrey Matangira"><i class="fab fa-facebook"></i></a>
+				<a href="https://wa.me/+263773546902"><i class="fab fa-whatsapp"></i></a>
+				<a href="tel:+263773546902"><i class="fa fa-phone"></i></a>
 				<a href=""><i class="fa fa-location-dot"></i></a>
-	
-    <p>&copy; 2025 Matangira Gallery. All rights reserved.</p>
 
-</div>
+				<p>&copy; 2025 Matangira Gallery. All rights reserved.</p>
 
-<!-------Script-------->
+			</div>
 
-<script>
-	const textElement = document.getElementById('sculptorText');
-	const text = textElement.textContent;
+			<!-------Script-------->
 
-function animateText(){
-//fade out the text
-textElement.classList.add('fade-out');
+			<script>
+				const textElement = document.getElementById('sculptorText');
+				const text = textElement.textContent;
 
-			setTimeout(() => {
-				//clear the text
-			textElement.textContent='';
-			textElement.classList.remove('fade-out');
+				function animateText() {
+					//fade out the text
+					textElement.classList.add('fade-out');
 
-	//Add the typewriter effect
-	textElement.classList.add('typewriter');
-	let i = 0;
-	const typingInterval = setInterval (()=> {
-		if ( i < text.length){
-			textElement.textContent += text.charAt(i)	
-		i++;
-	}
+					setTimeout(() => {
+						//clear the text
+						textElement.textContent = '';
+						textElement.classList.remove('fade-out');
 
-	else{
-		clearInterval(typingInterval);
-		//Remove typewriter effect after completion
-		setTimeout(() => {
-			textElement.classList.remove('typewriter');
-			///Restart the animation
-			setTimeout (animateText,700);
-			},700);
-		}	
-	},250); // Adjust typing speed here
-}, 300); //Wait for fade-out to complete
+						//Add the typewriter effect
+						textElement.classList.add('typewriter');
+						let i = 0;
+						const typingInterval = setInterval(() => {
+							if (i < text.length) {
+								textElement.textContent += text.charAt(i)
+								i++;
+							}
 
-}
-//Start the animation
-animateText();
+							else {
+								clearInterval(typingInterval);
+								//Remove typewriter effect after completion
+								setTimeout(() => {
+									textElement.classList.remove('typewriter');
+									///Restart the animation
+									setTimeout(animateText, 700);
+								}, 700);
+							}
+						}, 250); // Adjust typing speed here
+					}, 300); //Wait for fade-out to complete
 
-// ---------------------------Toggle Menu------------------
+				}
+				//Start the animation
+				animateText();
 
-var navLinks = document.getElementById("navLinks");
+				// ---------------------------Toggle Menu------------------
 
-function showMenu() {
-		navLinks.style.right = "0";
-	}	
-	function hideMenu() {
-		navLinks.style.right = "-200px";
-	}
-</script>
+				var navLinks = document.getElementById("navLinks");
+
+				function showMenu() {
+					navLinks.style.right = "0";
+				}
+				function hideMenu() {
+					navLinks.style.right = "-200px";
+				}
+			</script>
 </body>
+
 </html>
