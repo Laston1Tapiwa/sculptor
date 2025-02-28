@@ -12,32 +12,33 @@
 </head>
 
 <body>
-
-  <section class="header">
-    <div class="slideshow-container">
-      <div class="slide"></div>
-      <div class="slide"></div>
-      <div class="slide"></div>
-      <div class="slide"></div>
-    </div>
-
-    <nav>
-      <a href="index.html"><img src="./sculptures-images/logo2.png" height="100px" width="100px"> </a>
-      <div class="nav-links" id="navLinks">
-        <i class="fa fa-times" onclick="hideMenu()"></i>
-
-        <ul>
-          <li><a href="index.html">HOME</a></li>
-          <li><a href="gallery.html">GALLERY</a></li>
-          <li><a href="about.html">ABOUT</a></li>
-          <li><a href="contact.html">CONTACT</a></li>
-        </ul>
+  <div class="container">
+  	<section class="header">
+      <div class="slideshow-container">
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
       </div>
-      <i class="fa fa-bars" onclick="showMenu()"></i>
-    </nav>
-    </div>
+      <nav>
+        <a href="index.html"><img src="./sculptures-images/logo2.png" height="100px" width="100px"> </a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+    </section>
+
     <section class="about-section">
-      <div class="container">
+      
+        <ul id="about">
+          <li>
         <h2>About Us</h2>
         <p>
           Welcome to <strong>Matangira Gallery</strong>, where stone transforms into timeless masterpieces.
@@ -49,54 +50,51 @@
           that inspire and captivate. Whether it's a modern abstract or a classic figure, every sculpture
           at Matangira Gallery is a <strong>seal of true art</strong>.
         </p>
-
-      </div>
-    </section>
-
-    <section class="about-img">
-      <img src="./sculptures-images/About-image.jpg" alt="">
-    </section>
-
-    <section class="History">
+      </li>
+      <li>
       <h1>History</h1>
-      Godfrey was born in Wedza on the 5th of March 1975, and was educated at Mukamba Primary
+      <p>Godfrey was born in Wedza on the 5th of March 1975, and was educated at Mukamba Primary
       School in Buhera District. He is married and has two kids. There he was raised by his grandmother
       after his mother had passed away. His grandmother was the mother of the late great stone sculpting
       legend Nicholas Mukomberanwa. During the holidays he used to visit his uncles Nicholas
       Mukomberanwa, Nesbert Mukomberanwa and Albert Nathan Mamvura- during these visits he
       would play with sculpting tools as toys, this is when his passion for stone carving was birthed and
-      subsequently nurtured. When he was in the 6th grade he was transferred to Chitungwiza, where he
+      subsequently nurtured.
+      </p>
+      <p>
+      When he was in the 6th grade he was transferred to Chitungwiza, where he
       stayed with his father. He realised that he was talented in art the same year, after excursions with
       making wire crafts and wood carvings. As a young boy, he frequented his Uncle Albert Nathan
       Mamvura's workshop in Ruwa where he met a lot of the first generation Shona sculpture artists such
       as Sylvester Mubayi and many others who had a huge influence in the shaping of his career as an
       artist. In 2002, he moved to Nesbert's place, where he worked under his tutelage from 2002 to 2006.
-
+    </p>
+    <p>
       Godfrey started working on his own in 2007 with the help of the Mukomberanwa family, especially
       Nicholas Mukomberanwa who encouraged him to work independently. He loves creating unique
       pieces in different types of medium, particularly the hard type of stones such as springstone, opal,
       fruit serpentine, butter jade, lepidolite, cobalt and dolomite. He has participated in many
       exhibitions, competitions and workshops, of special mention is the Brock Awards first prize best
       sculpture he won in 2017 at Chitungwiza Arts Centre..
+    </p>
+  </li>
+</ul>
+      <img src="./sculptures-images/About-image.jpg" alt=""> 
+  </section>
 
-
-    </section>
 
     <!------FOOTER-------->
 
     <section class="footer">
-
       <div class="icons">
         <a href="https://facebook.com/Godfrey Matangira"><i class="fab fa-facebook"></i></a>
         <a href="https://wa.me/+263773546902"><i class="fab fa-whatsapp"></i></a>
         <a href="tel:+263773546902"><i class="fa fa-phone"></i></a>
         <a href=""><i class="fa fa-location-dot"></i></a>
-
-        <p>&copy; 2025 Matangira Gallery. All rights reserved.</p>
-
       </div>
+        <p>&copy; 2025 Matangira Gallery. All rights reserved.</p>
     </section>
-
+  </div>
     <script src="./js/script.js"></script>
-
+    </body>
 </html>

@@ -2,6 +2,19 @@
 	margin: 0;
 	padding: 0;
 	font-family: 'Poppins', sans-serif;
+	box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+	overflow-x:hidden ;
+}
+
+.container {
+	/* min-height: 100vh; */
+    display: flex;
+    flex-direction: column;
+	overflow: hidden;
 }
 
 .slideshow-container {
@@ -45,67 +58,12 @@
 
 /* Animation keyframes */
 @keyframes slideShow {
-
-	0%,
-	100% {
-		opacity: 1;
-		/* First image visible at start and end */
-	}
-
-	20% {
-		opacity: 1;
-		/* First image visible */
-	}
-
-	25% {
-		opacity: 0;
-		/* First image fades out */
-	}
-
-	30% {
-		opacity: 1;
-		/* Second image fades in */
-	}
-
-	45% {
-		opacity: 1;
-		/* Second image visible */
-	}
-
-	50% {
-		opacity: 0;
-		/* Second image fades out */
-	}
-
-	55% {
-		opacity: 1;
-		/* Third image fades in */
-	}
-
-	70% {
-		opacity: 1;
-		/* Third image visible */
-	}
-
-	75% {
-		opacity: 0;
-		/* Third image fades out */
-	}
-
-	80% {
-		opacity: 1;
-		/* Fourth image fades in */
-	}
-
-	95% {
-		opacity: 1;
-		/* Fourth image visible */
-	}
-
-	100% {
-		opacity: 0;
-		/* Fourth image fades out */
-	}
+	0%, 20%, 45%, 70%, 95% {
+        opacity: 1;
+    }
+    25%, 50%, 75%, 100% {
+        opacity: 0;
+    }
 }
 
 /*----------Fading text----------*/
@@ -135,31 +93,28 @@
 	from {
 		width: 0;
 	}
-
 	to {
 		width: 100%;
 	}
 }
 
 @keyframes blink-caret {
-
-	from,
-	to {
+	from,to {
 		border-color: transparent;
 	}
-
 	50% {
 		border-color: red;
 	}
 }
 
-/*-------------------------------------*/
-
+/* ----General styles */
+.header, .home, .footer {
+    /* flex: 1; */
+}
 
 nav .fa {
 	display: none;
 }
-
 
 nav {
 	display: flex;
@@ -202,7 +157,8 @@ nav {
 
 
 .home {
-	height: 275px;
+	/* height: 275px; */
+	min-height: 275px;
 	background: cover;
 	background-position: center;
 	display: flex;
@@ -217,7 +173,6 @@ nav {
 
 .home-content h1 {
 	position: relative;
-	/* font-size: 56px; */
 	font-weight: 700;
 	line-height: 1.2;
 }
@@ -305,7 +260,9 @@ nav {
 	width: 100%;
 	text-align: center;
 	padding: 30px;
-	margin: 10px;
+	/* margin: 10px; */
+	margin-top: auto;
+	
 }
 
 .footer h4 {
@@ -314,14 +271,7 @@ nav {
 	font-weight: 600;
 }
 
-.icons .fa {
-	color: #f44336;
-	margin: 0 13px;
-	cursor: pointer;
-	padding: 18px 0;
-}
-
-.icons .fab {
+.icons .fa, .icons .fab  {
 	color: #f44336;
 	margin: 0 13px;
 	cursor: pointer;
@@ -330,31 +280,20 @@ nav {
 
 /*---------ABOUT---------*/
 
-.about-section {
-	color: #ffffffee;
-	width: 40%;
-	background: rgb(180, 178, 178);
-	display: flex;
+.about-section  #about li{
+	list-style: none;
+	padding: 20px;
+	border: #cccccc solid 1px;
+	margin-bottom: 5px;
+	background-color: #e6e6e6;
+	width: 55%;
+	float: left;
 }
 
-.History h1 {
-	text-decoration: underline;
-}
-
-.History {
-	color: #fff;
-	margin-top: 40px;
-	background-color: rgb(180, 178, 178);
-	width: 50%;
-
-}
-
-
-.about-img img {
+.about-section  img {
 	float: right;
 	width: 30%;
 	margin-right: 40px;
-
 
 }
 
@@ -376,6 +315,7 @@ nav {
 .contact-form {
 	flex-basis: 60%;
 	align-items: center;
+	width: 100%;
 }
 
 .contact-left p {
@@ -466,25 +406,47 @@ nav {
 	width: 100%;
 	border-radius: 10px;
 	display: block;
-
 }
 
+#gallery  .true-art{
+	color: #bd0b0b;
+}
 
 
 /*------------ css for small screens --------*/
 
-@media (max-width: 600px) {
+@media (max-width: 600px) { 
+	
+	body , html{
+		float: none;
+		width: 100%;	
+	}
+		
+	.container {
+		/* height: 100px; */
+		min-height: 100%;
+	}
 
+	h1 .fade-text{
+		font-size: 1.2em;
+	}
 
+	 .slide {
+		box-sizing: fixed;
+		background-size: cover;
+	
+	} 
+	
 	.nav-links ul li {
 		display: block;
+		margin: 10px 0;
 	}
 
 	.nav-links {
 		position: absolute;
 		background: #f44336;
 		height: 100vh;
-		width: 200px;
+		width: 150px;
 		top: 0;
 		right: -200px;
 		text-align: left;
@@ -506,13 +468,11 @@ nav {
 	}
 
 	.footer {
-		padding: 50px;
-		margin: 10px;
-	}
-
-	.footer h4 {
-		margin-top: 20px;
-		font-weight: 600;
+		text-align: center;
+		margin: 0;
+		/* padding: 117px 0 0 0; */
+		padding: 30px 0 ;
+	
 	}
 
 	h1 {
@@ -527,70 +487,83 @@ nav {
 		font-size: 0.9em;
 	}
 
-	btn-box {
-		padding: 8px 16px;
+	.btn-box {
+		padding: 0px 0px 0px 0px;
 		font-size: 0.9em;
+		width: 323px;
+
+	}
+	.home{
+		/* height: 200px; */
+		min-height: 200px;
 	}
 
-	/*--------------contact form-------------*/
-
-	.social-icons a {
-		font-size: 1.2em;
+	.home-content{
+		width: 254px;
+		height: 257.797;
 	}
+	/* ------gallery-------- */
+	  /* Adjust the gallery container */
+	  #gallery  {
+        padding: 20px 0;
+    }
 
-	.social-icons a {
-		gap: 10px;
-	}
+    /* Adjust the work list grid layout */
+    .work-list {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
 
-	.contact-forma a button {
-		padding: 8px 16px;
-		font-size: 0.9em;
-	}
-
-	.contact-form input,
-	.contact-form textarea {
-		font-size: 0.9em;
-	}
-
-	/*--------------------*/
-
-	/* custom css */
-	.container {
+    /* Ensure images are responsive */
+    .work img {
         width: 100%;
-        padding: 0 10px;
-    }
-
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .navbar ul {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .navbar ul li {
-        margin: 5px 0;
-    }
-
-    .navbar ul li a {
+        border-radius: 10px;
         display: block;
-        width: 100%;
-        padding: 10px;
-        background-color: #f4f4f4;
-        border: 1px solid #ddd;
     }
 
-    .about-section {
-        padding: 20px 10px;
+	/* -------About Page------- */
+	
+	.about-section {
+        padding: 20px 5%;
+		flex-direction: column;
     }
 
-    .about-section h2 {
-        font-size: 24px;
+    .about-section h2, .about-section h1 {
+        font-size: 1.5em;
     }
 
     .about-section p {
-        font-size: 16px;
+        font-size: 0.9em;
+    }
+
+    .about-section img {
+        width: 100%;
+		margin-left: 0;
+		margin-top: 20px;
+    }
+	/*--------------contact form-------------*/
+
+	#contact {
+        padding: 20px 5%;
+    }
+
+    .contact-left, .contact-form {
+        flex-basis: 100%;
+    }
+
+    .contact-left p, .contact-form input, .contact-form textarea {
+        font-size: 0.9em;
+    }
+
+    .social-icons a {
+        font-size: 1.7em;
+        margin:19px ;
+    }
+	.social-icons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+		flex-wrap: wrap;
+		justify-content: center;
     }
 }
