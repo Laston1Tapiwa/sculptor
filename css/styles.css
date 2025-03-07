@@ -362,7 +362,7 @@ nav {
 	transform: translateY(-5px);
 }
 
-.contact-form a .btn-btn2 {
+.contact-form  .btn-btn2 {
 	display: inline-block;
 	width: 100px;
 	height: 50px;
@@ -375,7 +375,7 @@ nav {
 	box-sizing: border-box;
 }
 
-.contact-form a .btn-btn2:hover {
+.contact-form  .btn-btn2:hover {
 	background-color: #68110b;
 }
 
@@ -441,17 +441,13 @@ nav {
 	body , html{
 		float: none;
 		width: 100%;	
-		/* overflow:visible;  */
 		height: 100%;
 		position: absolute;
 	}
 		
 	.container {
-		/* height: 100px; */
 		min-height: 100vh;
 		padding: 0px;
-		
-		
 	}
 
 	h1 .fade-text{
@@ -505,7 +501,6 @@ nav {
 	.footer {
 		text-align: center;
 		margin: 0;
-		/* padding: 117px 0 0 0; */
 		padding: 30px 0 ;
 	
 	}
@@ -534,9 +529,16 @@ nav {
 	}
 
 	.home-content{
-		width: 254px;
+		width: 292px;
 		height: 257.797;
 	}
+
+
+.home-content h2{
+	width: 240px;
+}
+
+
 	/* ------gallery-------- */
 	  /* Adjust the gallery container */
 	  #gallery  {
@@ -562,6 +564,11 @@ nav {
         padding: 20px 5%;
 		flex-direction: column;
     }
+
+	.about-section  #about li{
+		width: 90%;
+	}
+	
 
     .about-section h2, .about-section h1 {
         font-size: 1.5em;
