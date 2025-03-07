@@ -1,4 +1,4 @@
-const textElement = document.getElementById('sculptorText');
+ const textElement = document.getElementById('sculptorText');
 		const text = textElement.textContent;
 
 		function animateText() {
@@ -44,3 +44,6 @@ const textElement = document.getElementById('sculptorText');
 		function hideMenu() {
 			document.getElementById("navLinks").style.right = "-200px";
 		}
+		
+
+		
