@@ -335,14 +335,15 @@ nav {
 	width: 550px;
 	box-sizing: border-box;
 	background-color: #e6e6e6;
-	margin: 20px;
+	margin: 0px;
 	padding: 5px;
 }
+
 .artist-statement img{
 	display: block;
 	max-width: 100%;
 	height: auto;
-	margin: 0px;
+	margin: 0%;
 }
 .artist-statement  p{
 	padding: 0px 10px 10px  10px;
@@ -355,6 +356,8 @@ nav {
 	height: auto;
 	margin: 0px;
 }
+
+
 
 
 
@@ -658,7 +661,7 @@ nav {
 	}
 	.artist-statement img{
 		width: 100%;
-		margin: 10px;
+		margin: 0px;
 	}
 	.artist-statement  p{
 		font-size: 0.9em;
