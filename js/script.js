@@ -46,4 +46,30 @@
 		}
 		
 
+		//----------------------Facebook ---------------------
+		function openFacebookProfile() {
+			var appLink = "fb://profile/100007563167816";
+			var webLink = "https://www.facebook.com/profile.php?id=100007563167816";
+		
+			// Create a hidden iframe to attempt to open the Facebook app
+			var iframe = document.createElement('iframe');
+			iframe.style.display = 'none';
+			iframe.src = appLink;
+			document.body.appendChild(iframe);
+		
+			// Fallback to the web link if the app is not installed
+			setTimeout(function() {
+				window.location = webLink;
+				document.body.removeChild(iframe);
+			}, 1500);
+		}
+
+ // ---------------JavaScript to load content based on URL parameters----------
+
+		function redirectToDescription(imageSrc, description) {
+			const url = `description.html?image=${encodeURIComponent(imageSrc)}&description=${encodeURIComponent(description)}`;
+			window.location.href = url;
+		}
+
+
 		

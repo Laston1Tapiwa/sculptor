@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Description</title>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+<div class="container">
+    <section class="header">
+        <div class="slideshow-container">
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+          </div>
+        <nav>
+            <a href="index.html"><img src="./sculptures-images/logo2.png" height="100px" width="100px"> </a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+    </section>
+
+    <section class="description">
+        <h1 id="description-title">Description</h1>
+        <img id="description-image" src="" alt="">
+        <p id="description-text">This is the description for the image.</p>
+    </section>
+
+    <!------FOOTER-------->
+
+    <section class="footer">
+
+        <div class="icons">
+            <a href="https://www.facebook.com/profile.php?id=100007563167816" onclick="openFacebookProfile(); return false;"><i class="fab fa-facebook"></i></a>
+            <a href="https://wa.me/+263773546902"><i class="fab fa-whatsapp"></i></a>
+            <a href="tel:+263773546902"><i class="fa fa-phone"></i></a>
+            <a href=""><i class="fa fa-location-dot"></i></a>
+        </div>
+            <p>&copy; 2025 Matangira Gallery. All rights reserved.</p>
+    </section>
+</div>
+
+            <!-------Script-------->
+
+            <script src="./js/script.js"></script>
+            <script src="./js/description.js"></script>
+            <script>
+              document.addEventListener('DOMContentLoaded', function() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const imageSrc = urlParams.get('image');
+                const description = urlParams.get('description');
+
+                if (imageSrc && description) {
+                    document.getElementById('description-image').src = imageSrc;
+                    document.getElementById('description-text').textContent = description;
+                }
+            });
+            </script>
+</body>
+
+</html>
