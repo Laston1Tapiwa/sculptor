@@ -653,11 +653,23 @@ nav {
     }
 
 	.artist-statement{
-		width: 400px;
+		width: 100%;
+		margin: 0px;
+	}
+	.artist-statement img{
+		width: 100%;
+		margin: 10px;
+	}
+	.artist-statement  p{
+		font-size: 0.9em;
 	}
 
 	.mine{
-		width: 400px;
+		width: 100%;
+		margin: 0px;
+	}
+	.mine p{
+		font-size: 0.9em;
 	}
 	/*--------------contact form-------------*/
 
